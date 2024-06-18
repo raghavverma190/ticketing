@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: auth
-          image: raghavverma190/auth
+          image: us.gcr.io/crypto-minutia-426422-g1/auth
 ---
 apiVersion: v1
 kind: Service
