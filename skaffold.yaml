@@ -20,6 +20,14 @@ build:
             dest: .
       docker:
         dockerfile: Dockerfile
+    - image: us.gcr.io/crypto-minutia-426422-g1/tickets
+      context: auth
+      sync:
+        manual:
+          - src: src/**/*.ts
+            dest: .
+      docker:
+        dockerfile: Dockerfile
 manifests:
   rawYaml:
     - ./infra/k8s/*
