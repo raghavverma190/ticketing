@@ -21,7 +21,7 @@ build:
       docker:
         dockerfile: Dockerfile
     - image: us.gcr.io/crypto-minutia-426422-g1/tickets
-      context: auth
+      context: tickets
       sync:
         manual:
           - src: src/**/*.ts

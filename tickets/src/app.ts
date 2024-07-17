@@ -3,6 +3,7 @@ import 'express-async-errors';
 import { json } from 'body-parser';
 import cookieSession from 'cookie-session';
 import { errorHandler, NotFoundError } from '@rvtickets190/common';
+import { createTicketRouter } from './routes/new';
 
 const app = express();
 app.set('trust proxy', true);
@@ -14,7 +15,9 @@ app.use(
   })
 );
 
-app.get('*', async (req, res) => {
+app.use(createTicketRouter);
+
+app.all('*', async (req, res) => {
   throw new NotFoundError();
 });
 
