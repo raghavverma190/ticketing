@@ -3,13 +3,13 @@ import mongoose from 'mongoose';
 interface TicketAttrs {
   title: String;
   price: number;
-  userId: string;
+  userId: String;
 }
 
 interface TicketDoc extends mongoose.Document {
   title: String;
   price: number;
-  userId: string;
+  userId: String;
 }
 
 interface TicketModel extends mongoose.Model<TicketDoc> {
